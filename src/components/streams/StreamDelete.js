@@ -12,7 +12,7 @@ class StreamDelete extends React.Component {
 
   renderActions() {
     // just destructuring, becasue this.props.match.params id just too long
-    const { id } = this.props.match;
+    const { id } = this.props.match.params;
 
     return (
       <React.Fragment>

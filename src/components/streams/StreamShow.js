@@ -25,7 +25,7 @@ class StreamShow extends React.Component {
   }
 
   buildPlayer() {
-    if (this.player || this.props.stream) {
+    if (this.player || !this.props.stream) {
       return;
     }
 
@@ -35,7 +35,7 @@ class StreamShow extends React.Component {
       url: `http://localhost:8000/live/${id}.flv`
     });
     this.player.attachMediaElement(this.videoRef.current);
-    this.playrt.load();
+    this.player.load();
   }
 
   render() {
